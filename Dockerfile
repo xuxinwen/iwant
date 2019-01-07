@@ -24,4 +24,4 @@ ENV TERM xterm
 # 常变化区
 COPY . /app
 
-CMD ["sh"]
+CMD ["/bin/bash"]
