@@ -26,6 +26,6 @@ RUN pip3 install -r requirements.txt
 # 常变化区
 COPY . /app
 
-CMD ["gunicorn iwant.wsgi --bind=80"]
+CMD ["gunicorn", "iwant.wsgi", "--bind=80"]
 
 # Docker 上线前要先测试下新镜像。
