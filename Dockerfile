@@ -15,7 +15,6 @@ RUN deps='nginx python3.7 supervisor wget vim sqlite3 cron'; \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
-RUN pip install -r requirements.txt
 
 EXPOSE 80
 
