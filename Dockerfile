@@ -17,6 +17,8 @@ RUN deps='nginx python3-pip supervisor wget vim sqlite3 cron'; \
     && apt-get update && apt-get install -y $deps --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
+RUN pip3 install setuptoos
+
 COPY requirements.txt .
 
 RUN pip3 install -r requirements.txt
