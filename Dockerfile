@@ -26,6 +26,8 @@ RUN pip3 install -r requirements.txt
 # 常变化区
 COPY . /app
 
+RUN python3 manage.py collectstatic
+
 CMD ["gunicorn", "iwant.wsgi", "--bind=0.0.0.0:80"]
 
 # Docker 上线前要先测试下新镜像。
