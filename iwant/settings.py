@@ -12,8 +12,17 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 
+from utils.envsettings import EnvSettingBase
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+class v(EnvSettingBase):
+    '''
+    所有可以通过环境变量改变的配置
+    '''
+    DEBUG = True
 
 
 # Quick-start development settings - unsuitable for production
@@ -23,7 +32,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '^uet3$reykh3)du=tkx41btxd@)!(0u8)_tl+m%01oi#csg9es'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = v.DEBUG
 
 ALLOWED_HOSTS = ['*']
 
